@@ -1,1 +1,11 @@
-<p>product-view works!</p>
+<div class="w-full flex items-start max-sm:flex-col gap-6">
+    <div class="flex flex-col gap-3 items-start">
+        <div *ngFor="let image of listImage" class="item rounded-lg flex border border-gray-400 items-center justify-center w-[50px] h-[50px]"
+            [class.selected]="selectedImage == image" (click)="setSelectedImage(image)">
+            <img class="w-[90%] h-auto" [src]="image">
+        </div>
+    </div>
+    <div class="bg-[#f8f8fa] rounded-2xl p-3">
+        <img class="w-[300px] h-[300px]" [src]="selectedImage">
+    </div>
+</div>

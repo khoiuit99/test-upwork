@@ -1,0 +1,5 @@
+<div class="flex items-center">
+    <div class="text-black font-semibold" *ngFor="let item of breadCrumb; let i = index">
+        <span>{{item}}</span><span class="px-2" *ngIf="i < breadCrumb.length - 1">/</span>
+    </div>
+</div>

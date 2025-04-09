@@ -1,1 +1,33 @@
-<p>product works!</p>
+<section class="container mt-3">
+    <div class="header flex items-baseline gap-10 w-[100%] max-w-[1200px]">
+        <app-product-view class="w-[50%]" [listImage]="listImage"></app-product-view>
+        <div class="flex flex-col items-start gap-2">
+            <div class="product__name">
+                Apple iPhone 16 Pro Max, 256GB
+            </div>
+            <div class="flex items-center">
+                <div class="flex items-center gap-2">
+                    <i class="pi pi-star-fill"></i>
+                    <span class="font-semibold">4.1</span>
+                </div>
+                <div class="h-[20px] w-[1px] bg-gray-300 mx-6"></div>
+                <div class="flex items-center gap-2">
+                    <i class="pi pi-bell"></i>
+                    <span class="font-semibold">Monitor price</span>
+                </div>
+                <div class="h-[20px] w-[1px] bg-gray-300 mx-6"></div>
+                <div class="flex items-center gap-2">
+                    <img src="../../../assets/icon/scale.png">
+                    <span class="font-semibold">Compare</span>
+                </div>
+            </div>
+            <div class="">
+                Experience the next generation of mobile technology with the iPhone 16 Pro Max 256GB,
+                equipped with the Apple A18 Pro chip and fast 5G connection.
+                <span class="underline cursor-pointer">Read more</span><br><br>
+                Compare prices from <b>SEK 17,190</b> to <b>SEK 22,038</b> · Investment 1 in <span
+                    class="underline cursor-pointer">Mobile phones</span>
+            </div>
+        </div>
+    </div>
+</section>
