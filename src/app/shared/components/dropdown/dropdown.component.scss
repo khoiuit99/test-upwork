@@ -1,0 +1,9 @@
+.arrow {
+  transition: transform 0.2s linear;
+  transform: rotate(0deg);
+
+  &.expand {
+    transition: transform 0.2s linear;
+    transform: rotate(180deg);
+  }
+}

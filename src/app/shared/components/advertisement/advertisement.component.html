@@ -1,1 +1,55 @@
-<p>advertisement works!</p>
+@if (advertise.type == 1) {
+<div class="rounded-2xl bg-white flex items-center w-full justify-between h-[75px] pr-3">
+    <div class="flex items-center">
+        <div class="rotate-text h-[30px] w-[75px] font-bold text-center overflow-hidden bg-[#d0fde0] text-[#83c1a3]">
+            Advertisement
+        </div>
+        <div class="flex flex-col items-start">
+            <span class="font-bold text-base">
+                {{advertise.name}}
+            </span>
+            <span class="text-[#6f7b92] text-base font-semibold overflow-hidden whitespace-nowrap text-ellipsis">
+                {{advertise.productName}}
+            </span>
+        </div>
+    </div>
+    <div class="flex items-center gap-4">
+        <span class="font-thin text-sm">{{advertise.status}}</span>
+        <span class="font-bold text-2xl">
+            SEK {{advertise.price | number:'1.3-3'}}
+        </span>
+        <i class="pi pi-chevron-right cursor-pointer"></i>
+    </div>
+</div>
+}
+@if (advertise.type == 2) {
+<div class="rounded-2xl bg-white flex items-start w-full justify-start flex-col">
+    <div class="flex items-center border-b border-b-gray-300 w-full">
+        <div class="p-3 border-r border-b-gray-300 h-full cursor-pointer">
+            <i class="pi pi-chevron-down"></i>
+        </div>
+        <div class="flex items-center">
+            <div class="px-3 w-full flex items-center gap-3">
+                <img class="rounded-3xl w-[40px] h-[40px]" [src]="advertise.logo" *ngIf="advertise.logo != null">
+                <span class="font-bold text-base"> {{advertise.name}}</span>
+                <div class="flex items-center gap-2 bg-[#f3f3f3] py-1 px-2 rounded-md text-sm" *ngIf="advertise.rating != null">
+                    <i class="pi pi-star-fill"></i>
+                    <span class="font-semibold">{{advertise.rating | number:'1.1-1'}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex items-center w-full justify-between p-3">
+        <span class="text-[#6f7b92] text-base font-semibold w-3/5 overflow-hidden whitespace-nowrap text-ellipsis">
+            {{advertise.productName}}
+        </span>
+        <div class="flex items-center gap-4">
+            <span class="font-thin text-sm">{{advertise.status}}</span>
+            <span class="font-bold text-2xl">
+                SEK {{advertise.price | number:'1.3-3'}}
+            </span>
+            <i class="pi pi-chevron-right cursor-pointer"></i>
+        </div>
+    </div>
+</div>
+}
