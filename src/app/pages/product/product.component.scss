@@ -1,11 +1,17 @@
-.product__name{
-    font-weight: bold;
-    font-size: 40px;
+.product__name {
+  font-weight: bold;
+  font-size: 40px;
 }
 
-.selected{
-    font-weight: bold;
-    padding-bottom: 8px;
-    color: black;
-    border-bottom: 2px solid black;
+.selected {
+  font-weight: bold;
+  padding-bottom: 8px;
+  color: black;
+  border-bottom: 2px solid black;
+}
+
+@media (max-width: 1024px) {
+  .product__name {
+    font-size: 30px;
+  }
 }
