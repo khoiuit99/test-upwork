@@ -1,5 +1,5 @@
 export interface ProductMobile {
-    listImage: string[]
+    listImage: Image[]
     productName: string;
     rating: number;
     description: string;
@@ -7,6 +7,11 @@ export interface ProductMobile {
     color: Color[]
 }
 
+export interface Image {
+    imageSrc: string;
+    guard: number;
+    liked: boolean;
+}
 export interface Color {
     colorName: string;
     hexColor: string;

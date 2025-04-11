@@ -46,10 +46,26 @@ export class ProductComponent implements OnInit {
 
   dataFake: ProductMobile = {
     listImage: [
-      "../../../assets/apple16-1.png",
-      "../../../assets/apple16-2.png",
-      "../../../assets/apple16-3.png",
-      "../../../assets/apple16-4.png"
+      {
+        guard: 20,
+        imageSrc: "../../../assets/apple16-1.png",
+        liked: false
+      },
+      {
+        guard: 25,
+        imageSrc: "../../../assets/apple16-2.png",
+        liked: true
+      },
+      {
+        guard: 60,
+        imageSrc: "../../../assets/apple16-3.png",
+        liked: true
+      },
+      {
+        guard: 10,
+        imageSrc: "../../../assets/apple16-4.png",
+        liked: false
+      },
     ],
     color: [
       {

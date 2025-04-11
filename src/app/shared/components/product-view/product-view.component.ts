@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
+import { Image } from '../../models/product.model';
 
 @Component({
   selector: 'app-product-view',
@@ -12,9 +13,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ProductViewComponent implements OnInit {
 
-  @Input() listImage: string[] = []
+  @Input() listImage: Image[] = []
 
-  selectedImage: string
+  selectedImage: Image
 
   constructor() {
 
@@ -24,7 +25,7 @@ export class ProductViewComponent implements OnInit {
     this.selectedImage = this.listImage[0]
   }
 
-  setSelectedImage(image: string) {
+  setSelectedImage(image: Image) {
     this.selectedImage = image
   }
 }
